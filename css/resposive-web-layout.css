@@ -1,0 +1,341 @@
+
+:root{
+    --primary-color: #f94f4f;
+    --secondary-color: #fc7a7c;
+    --accent-color: #191921;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    font-size: 16px
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1em;
+
+}
+
+h1{
+    font-size: 2.6rem;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-padding{
+    padding: 30px 40px;
+}
+
+.primary-button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 1.5em 2em;
+}
+
+.primary-bold{
+    color: var(--primary-color);
+}
+
+.text-column-container{
+    position: relative;
+
+}
+
+.start-decoration::before{
+    content: "~";
+    font-weight:700;
+    font-size: 7rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: -4.2rem;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.text-column-container a{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-bottom: .3em;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.text-column-container p:has(a){
+    margin-top: 30px;
+}
+
+.primary-bg{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.accent-bg{
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+.our-approach{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.our-approach-numbers-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.approach-number-container p{
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 200;
+}
+
+.approach-number-container{
+    position: relative;
+}
+
+.brand-strategy-number::before{
+    content: "01";
+    position: absolute;
+    top:-2.5rem ;
+    left:-1.5rem ;
+    font-size:5rem;
+    font-weight:700 ;
+    color: var(--secondary-color);
+    mix-blend-mode:lighten ;
+    letter-spacing: -0.05em;
+    opacity: 7;
+}
+
+.approach-design-container::before{
+    content: "02";
+    position: absolute;
+    top:-2.5rem ;
+    left:-1.5rem ;
+    font-size:5rem;
+    font-weight:700 ;
+    color: var(--secondary-color);
+    mix-blend-mode:lighten ;
+    letter-spacing: -0.05em;
+    opacity: 7;
+}
+
+
+.web-desing-number::before{
+    content: "03";
+    position: absolute;
+    top:-2.5rem ;
+    left:-1.5rem ;
+    font-size:5rem;
+    font-weight:700 ;
+    color: var(--secondary-color);
+    mix-blend-mode:lighten ;
+    letter-spacing: -0.05em;
+    opacity: 7;
+}
+
+.brand-naming{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.brand-naming,
+.image-column-container{
+    position: relative;
+}
+
+.brand-naming .image-column-container p{
+    position:absolute;
+    margin: 0;
+    bottom: 2rem;
+    right: 2rem;
+    text-align: right;
+    color: var(--white-color);
+    font-weight: 200;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.brand-naming,
+.image-column-container::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: color-burn;
+    background: rgb(0,0,0);
+    background: linear-gradiet (0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+} 
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+   .hero-image{
+        display: none;
+    }
+
+    .hero{
+        display: flex;
+        background: url(../images/girls.jpg);
+        position: relative;
+    }
+
+    .hero::after{
+        content: "";
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%);
+        inset: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .section-padding{
+        width: 100%;
+        z-index: 10;
+    }
+
+    .design-is-strategic{
+        display: flex;
+        min-height: 60vh;
+    }
+
+    .design-is-strategic .image-column-container, .design-is-strategic .text-column-container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .design-is-strategic .text-column-container{
+        flex-direction: column;
+        padding-left: 4rem;
+    }
+
+    .design-is-strategic img{
+        height: 100%;
+        max-width: auto;
+        object-fit: cover;
+
+    }
+
+    .start-decoration::before{
+        top: 20%;
+        left: -2.5rem;
+    }
+
+    .our-approach{
+        display: flex;
+        background-color: var(--white-color);
+        color: var(--black-color);
+    }
+
+    .narrow-text-column-container{
+        width: 40%;
+        padding-top: 15vh;
+    }
+
+    .our-approach .text-column-container{
+        padding: 12vh 70px 10vh;
+        width: 60%;
+        margin-top: -8vh;
+    }
+
+    .brand-naming{
+        display: grid;
+        height: 40vh;
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .brand-naming .text-column-container{
+        grid-area: 1 / 1 / 4 / 8;
+        z-index: 11;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .brand-naming .text-column-container::after{
+        content: "~";
+        font-family: "Oswald", sans-serif;
+        font-size: 7rem;
+        font-weight: 700;
+        color: var(--white-color);
+        position: absolute;
+        top: 30%;
+        right: -2rem;
+    
+    }
+
+    .brand-naming .image-column-container{
+        grid-area: 1 / 7 / -1 / -1;
+    }
+
+    .brand-naming img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between; 
+        padding-top: 5vh !important;
+        padding-bottom: 5vh !important;
+    }
+}  
+
+
+@media screen and (min-width: 1024px){
+
+    footer{
+        position: relative;
+        overflow: hidden;
+        padding: 80px !important;
+    }
+
+    footer::before{
+        content: "~";
+        font-family: "Oswald", sans-serif;
+        font-size: 9rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        position: absolute;
+        top: 15%;
+        left: -2.5rem;
+    }
+    
+}
+
+
+
+
+
